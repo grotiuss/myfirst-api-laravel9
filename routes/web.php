@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function() {
-    return view('home');
+    $data = [
+        'main_text' => "Hello world",
+        'tab_label' => "HOME"
+    ];
+    return view('home', $data);
 });
 
 Route::get('/start', function () {
