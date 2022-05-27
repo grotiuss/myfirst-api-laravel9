@@ -20,11 +20,8 @@ use App\Http\Controllers\AboutController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-
 Route::get('/about', [AboutController::class, 'index']);
-
 Route::get('/post', [PostsController::class, 'index']);
-
 Route::get('/post/{slug}', [PostsController::class, 'select']);
 
 
