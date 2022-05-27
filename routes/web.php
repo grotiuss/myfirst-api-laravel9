@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Posts;
+
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostsController;
+use App\Http\Controllers\AboutController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,21 +19,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function() {
-    $data = [
-        'title' => "HOME",
-        'main_text' => "Hello world"
-    ];
-    return view('home', $data);
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/about', [AboutController::class, 'index']);
+Route::get('/post', [PostsController::class, 'index']);
+Route::get('/post/{slug}', [PostsController::class, 'select']);
 
-Route::get('/about', function() {
-    $data = [
-        'title' => "About",
-        'main_text' => "Halaman About"
-    ];
-    return view('about', $data);
-});
 
 Route::get('/start', function () {
     return view('welcome');
