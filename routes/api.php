@@ -18,6 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/test-get', function(Request $request) {
+Route::post('/test-post', function(Request $request) {
     return "Ladida";
 });
