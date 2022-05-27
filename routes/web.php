@@ -24,11 +24,6 @@ Route::get('/about', [AboutController::class, 'index']);
 Route::get('/post', [PostsController::class, 'index']);
 Route::get('/post/{slug}', [PostsController::class, 'select']);
 
-
 Route::get('/start', function () {
     return view('welcome');
 });
-
-// Route::get('/greeting', function () {
-//     return "Hello world";
-// });
