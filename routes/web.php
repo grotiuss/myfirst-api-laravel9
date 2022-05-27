@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Models\Posts;
 
+use App\Http\Controllers\PostsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,25 +33,9 @@ Route::get('/about', function() {
     return view('about', $data);
 });
 
-Route::get('/post', function() {
-    $data = [
-        'title' => "Post",
-        'main_text' => "These datas are taken from Posts model",
-        'posts' => Posts::select()
-    ];
+Route::get('/post', [PostsController::class, 'index']);
 
-    return $data;
-});
-
-Route::get('/post/{slug}', function($slug) {
-    $data = [
-        'title' => "Post",
-        'main_text' => "These datas are taken from Posts model",
-        'posts' => Posts::select($slug)
-    ];
-
-    return $data;
-});
+Route::get('/post/{slug}', [PostsController::class, 'select']);
 
 
 Route::get('/start', function () {
