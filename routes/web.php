@@ -15,10 +15,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function() {
     $data = [
-        'main_text' => "Hello world",
-        'tab_label' => "HOME"
+        'title' => "HOME",
+        'main_text' => "Hello world"
     ];
     return view('home', $data);
+});
+
+Route::get('/about', function() {
+    $data = [
+        'title' => "About",
+        'main_text' => "Halaman About"
+    ];
+    return view('about', $data);
 });
 
 Route::get('/start', function () {
