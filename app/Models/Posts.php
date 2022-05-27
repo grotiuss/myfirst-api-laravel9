@@ -25,14 +25,15 @@ class Posts extends Model
     ];
 
     public static function select($slug = NULL) {
-        $posts = self::$dummy_posts;
+        $posts = collect(self::$dummy_posts);
         if($slug) {
-            foreach($posts as $post) {
-                if($post['slug'] === $slug) {
-                    return $post;
-                }
-            }
-            return false;
+            // foreach($posts as $post) {
+            //     if($post['slug'] === $slug) {
+            //         return $post;
+            //     }
+            // }
+            // return null;
+            return $posts->firstWhere('slug', $slug);
         }
         return self::$dummy_posts;
     }
