@@ -21,10 +21,10 @@ class PostsController extends Controller
     public function select($slug) {
         $data = [
             'title' => "Post",
-            'main_text' => "These datas are taken from Posts model",
+            'main_text' => "These datas are taken from a model named Posts",
             'posts' => Posts::select($slug)
         ];
-    
-        return $data;
+        
+        return view('posts_detail', $data);
     }
 }
