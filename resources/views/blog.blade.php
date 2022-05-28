@@ -6,7 +6,7 @@
         @foreach ($posts as $post)
             <article class="mb-5">
                 <h2>{{ $post['title'] }}</h2>
-                <a href="/post/{{ $post['slug'] }}">Click here!</a>
+                <a href="/blog/{{ $post['slug'] }}">Click here!</a>
                 <p> {{ $post['body'] }}</p>
             </article>
         @endforeach

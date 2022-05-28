@@ -5,7 +5,7 @@
     <div class="container-fluid mt-5">
         <article class="mb-5">
             <h2>{{ $posts['title'] }}</h2>
-            <a href="/post">Back to posts!</a>
+            <a href="/blog">Back to posts!</a>
             <p> {{ $posts['body'] }}</p>
         </article>
     </div>
