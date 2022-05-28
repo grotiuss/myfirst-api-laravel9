@@ -11,11 +11,11 @@ class PostsController extends Controller
     public function index() {
         $data = [
             'title' => "Post",
-            'main_text' => "These datas are taken from Posts model",
+            'main_text' => "These datas are taken from a model named Posts",
             'posts' => Posts::select()
         ];
     
-        return $data;
+        return view('posts', $data);
     }
 
     public function select($slug) {
