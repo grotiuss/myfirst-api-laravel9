@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 
 
-class Posts extends Model
+class Blog extends Model
 {
     // use HasFactory;
     private static $dummy_posts = [

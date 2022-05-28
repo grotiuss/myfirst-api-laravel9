@@ -22,6 +22,9 @@
                 <a class="nav-link {{ active_('About', $title) }}" href="/about">About</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link {{ active_('Blog', $title) }}" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
             </li>
             {{-- <li class="nav-item dropdown">
