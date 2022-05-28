@@ -18,6 +18,18 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/test-get', function(Request $request) {
+    $data = [
+        'status' => 200,
+        'message' => "Hello world"
+    ];
+    return response()->json($data, $data['status']);
+});
+
 Route::post('/test-post', function(Request $request) {
-    return "Ladida";
+    $data = [
+        'status' => 200,
+        'message' => "Hello world"
+    ];
+    return response()->json($data, $data['status']);
 });
