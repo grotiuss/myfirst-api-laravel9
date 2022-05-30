@@ -20,17 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/blog-get/{slug}', function (Request $request) {
-//     $data = [
-//         'status' => 200,
-//         'message' => "Success!",
-//         // 'data' => Blog::select()
-//         'data' => $slug
-//     ];
-//     return response()->json($data, $data['status']);
-// });
-
-
 Route::get('/slug-get/{param1}/{param2}', function(Request $request, $param1, $param2) {
     $data = [
         'status' => 200,
