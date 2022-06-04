@@ -22,7 +22,7 @@ use App\Http\Controllers\AboutController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/blog', [BlogController::class, 'index']);
-Route::get('/blog/{slug}', [BlogController::class, 'select']);
+Route::get('/blog/{blog:slug}', [BlogController::class, 'find']);
 
 Route::get('/start', function () {
     return view('welcome');
