@@ -5,9 +5,9 @@
     <div class="container-fluid mt-5">
         @foreach ($posts as $post)
             <article class="mb-5">
-                <h2>{{ $post['title'] }}</h2>
-                <a href="/blog/{{ $post['slug'] }}">Click here!</a>
-                <p> {{ $post['body'] }}</p>
+                <h2>{{ $post->title }}</h2>
+                <a href="/blog/{{ $post->slug }}">Click here!</a>
+                {!! $post->excerpt !!} 
             </article>
         @endforeach
     </div>
