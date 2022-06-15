@@ -6,6 +6,7 @@
         <article class="mb-5">
             <h2>{{ $posts->title }}</h2>
             <a href="/blog">Back to posts!</a>
+            <p>by. Grotius Cendikia Hasiholan in {{ $posts->category->name }}</p>
             {!! $posts->body !!}
         </article>
     </div>
