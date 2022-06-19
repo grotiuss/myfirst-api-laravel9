@@ -23,10 +23,10 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index']);
-Route::get('/blog', [BlogController::class, 'index']);
-Route::get('/blog/{blog:slug}', [BlogController::class, 'find']);
-Route::get('/category', [CategoryController::class, 'index']);
-Route::get('/category/{category:slug}', [CategoryController::class, 'detail']);
+Route::get('/blogs', [BlogController::class, 'index']);
+Route::get('/blogs/{blog:slug}', [BlogController::class, 'find']);
+Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/categories/{category:slug}', [CategoryController::class, 'detail']);
 
 Route::get('/start', function () {
     return view('welcome');
